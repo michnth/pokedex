@@ -8,6 +8,7 @@ import 'package:pokedexv2/pokemons.dart';
 void main() => runApp(MaterialApp(
       title: "Pokedex App",
       home: HomePage(),
+      theme: ThemeData(primaryColor: Colors.red, accentColor: Colors.redAccent),
       debugShowCheckedModeBanner: false,
     ));
 
@@ -21,7 +22,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Pokemons pokemons;
 
-  Color bgColor = Color(0xFF393636);
+  Color bgColor = Colors.white;
   Future<List<Pokemons>> _fetchData() async {
     final response = await http.get(HomePage.url);
     final decode = json.decode(response.body);
