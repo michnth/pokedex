@@ -10,13 +10,14 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('${pokemon.name} info'.toUpperCase()),
+        title: Text('${pokemon.name} info'.toUpperCase(),
+            style: TextStyle(color: Colors.black)),
         backgroundColor: _setColor(pokemon),
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back, color: Colors.black),
           tooltip: "Return to list",
           onPressed: () {
             Navigator.pop(context, true);
@@ -35,7 +36,7 @@ class DetailPage extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 25,
-                        color: Colors.white),
+                        color: Colors.black),
                   )),
           )
         ],
@@ -67,7 +68,7 @@ class DetailPage extends StatelessWidget {
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 40,
-                color: Colors.white,
+                color: Colors.black,
                 letterSpacing: 1),
           ),
           SizedBox(
@@ -88,7 +89,7 @@ class DetailPage extends StatelessWidget {
                       child: Text(
                         pokemon.types[index].type.name.toUpperCase(),
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 2),
@@ -107,15 +108,15 @@ class DetailPage extends StatelessWidget {
                 children: [
                   Text('${pokemon.weight / 10} KG',
                       style: TextStyle(
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w700,
                         fontSize: 20,
-                        color: Colors.white,
+                        color: Colors.black,
                       )),
                   Text('Weight',
                       style: TextStyle(
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w700,
                         fontSize: 18,
-                        color: Colors.white70,
+                        color: Colors.black54,
                       )),
                 ],
               ),
@@ -123,15 +124,15 @@ class DetailPage extends StatelessWidget {
                 children: [
                   Text('${pokemon.height / 10} M',
                       style: TextStyle(
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w700,
                         fontSize: 20,
-                        color: Colors.white,
+                        color: Colors.black,
                       )),
                   Text('Height',
                       style: TextStyle(
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w700,
                         fontSize: 18,
-                        color: Colors.white70,
+                        color: Colors.black54,
                       )),
                 ],
               ),
@@ -143,9 +144,9 @@ class DetailPage extends StatelessWidget {
           Text(
             "Stats :",
             style: TextStyle(
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.bold,
                 fontSize: 24,
-                color: Colors.white,
+                color: Colors.black,
                 letterSpacing: 2),
           ),
           SizedBox(
@@ -163,8 +164,8 @@ class DetailPage extends StatelessWidget {
                         '${poke.stat.name} = ${poke.baseStat}'.toUpperCase(),
                         style: TextStyle(
                             fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
                             letterSpacing: 1),
                       ),
                       SizedBox(
